@@ -12,6 +12,8 @@ CREATE TABLE eventlogs(
     log_id INTEGER primary key autoincrement,
     user_id integer,
     event_id integer,
+    input integer,
+    result integer,
     start_time datetime,
     end_time datetime
 );

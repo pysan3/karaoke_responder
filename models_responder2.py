@@ -4,19 +4,6 @@ import datetime
 from db_setting import session
 from db_tables import *
 
-"""
-# DBにレコードの追加
-user = Users()
-user.user_name = 'とも太郎'
-session.add(user)
-session.commit()
-
-# Userテーブルのnameカラムをすべて取得
-users = session.query(User).all()
-for user in users:
-    print(user.name)
-"""
-
 def isAccount(datas):
     try:
         result = session.query(Users).filter_by(user_name=datas['user_name']).one()

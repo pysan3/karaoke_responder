@@ -20,9 +20,9 @@ def sleep(s=10):
     time.sleep(s)
     print('slept!')
 
-@api.route('/')
-def hello(req, resp):
-    resp.content = 'processing'
+@api.add_route('/', static=True)
+def index(req, resp):
+    resp.content = api.template('index.html')
 
 @api.route('db/signin')
 def signin(req, resp):
